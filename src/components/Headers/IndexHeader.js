@@ -2,7 +2,7 @@
 import React from "react";
 
 // reactstrap components
-import { Container } from "reactstrap";
+import { Container, Table } from "reactstrap";
 // core components
 
 function IndexHeader() {
@@ -24,46 +24,61 @@ function IndexHeader() {
 
   return (
     <>
-      <div className="page-header clear-filter" filter-color="blue">
+      <div className="page-header clear-filter bg-black">
         <div
           className="page-header-image"
-          style={{
-            backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
-          }}
+          // style={{
+          //   backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
+          // }}
           ref={pageHeader}
         ></div>
         <Container>
-          <div className="content-center brand">
-            <img
-              alt="..."
-              className="n-logo"
-              src={require("assets/img/now-logo.png")}
-            ></img>
-            <h1 className="h1-seo">Now UI Kit.</h1>
-            <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
-          </div>
-          <h6 className="category category-absolute">
-            Designed by{" "}
-            <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
-              <img
-                alt="..."
-                className="invision-logo"
-                src={require("assets/img/invision-white-slim.png")}
-              ></img>
-            </a>
-            . Coded by{" "}
-            <a
-              href="https://www.creative-tim.com?ref=nukr-index-header"
-              target="_blank"
-            >
-              <img
-                alt="..."
-                className="creative-tim-logo"
-                src={require("assets/img/creative-tim-white-slim2.png")}
-              ></img>
-            </a>
-            .
-          </h6>
+          <Table dark>
+            <thead>
+              <tr>
+                <th>거래소</th>
+                <th>원화 시세</th>
+                <th>달러 시세</th>
+                <th>변동률</th>
+                <th>한국 프리미엄</th>
+                <th>거래량</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">빗썸</th>
+                <td>8,000,000 원</td>
+                <td>7,600 $</td>
+                <td>▼ -29,000 -0.12 %</td>
+                <td>-28,110 -0.32%</td>
+                <td>3,158 BTC</td>
+              </tr>
+              <tr>
+                <th scope="row">업비트</th>
+                <td>8,000,000 원</td>
+                <td>7,600 $</td>
+                <td>▼ -29,000 -0.12 %</td>
+                <td>-28,110 -0.32%</td>
+                <td>3,158 BTC</td>
+              </tr>
+              <tr>
+                <th scope="row">바이넨스</th>
+                <td>8,000,000 원</td>
+                <td>7,600 $</td>
+                <td>▼ -29,000 -0.12 %</td>
+                <td>-28,110 -0.32%</td>
+                <td>3,158 BTC</td>
+              </tr>
+              <tr>
+                <th scope="row">OK</th>
+                <td>8,000,000 원</td>
+                <td>7,600 $</td>
+                <td>▼ -29,000 -0.12 %</td>
+                <td>-28,110 -0.32%</td>
+                <td>3,158 BTC</td>
+              </tr>
+            </tbody>
+          </Table>
         </Container>
       </div>
     </>

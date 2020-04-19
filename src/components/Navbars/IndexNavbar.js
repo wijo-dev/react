@@ -14,7 +14,7 @@ import {
   NavLink,
   Nav,
   Container,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 function IndexNavbar() {
@@ -50,7 +50,7 @@ function IndexNavbar() {
           }}
         />
       ) : null}
-      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="warning">
+      <Navbar className={"fixed-top " + navbarColor} expand="lg" color="orange">
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
@@ -58,10 +58,10 @@ function IndexNavbar() {
               target="_blank"
               id="navbar-brand"
             >
-              Now UI Kit React
+              BIGBIT
             </NavbarBrand>
             <UncontrolledTooltip target="#navbar-brand">
-              Designed by Invision. Coded by Creative Tim
+              Designed by BigBiture
             </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
@@ -83,20 +83,7 @@ function IndexNavbar() {
             navbar
           >
             <Nav navbar>
-              <NavItem>
-                <NavLink
-                  href="#pablo"
-                  onClick={e => {
-                    e.preventDefault();
-                    document
-                      .getElementById("download-section")
-                      .scrollIntoView();
-                  }}
-                >
-                  <i className="now-ui-icons arrows-1_cloud-download-93"></i>
-                  <p>Download</p>
-                </NavLink>
-              </NavItem>
+              {/* 게시판 */}
               <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
@@ -106,19 +93,78 @@ function IndexNavbar() {
                   onClick={e => e.preventDefault()}
                 >
                   <i className="now-ui-icons design_app mr-1"></i>
-                  <p>Components</p>
+                  <p>게시판</p>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem to="/index" tag={Link}>
                     <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
-                    All components
+                    자유게시판
                   </DropdownItem>
                   <DropdownItem
                     href="https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-index-navbar"
                     target="_blank"
                   >
                     <i className="now-ui-icons design_bullet-list-67 mr-1"></i>
-                    Documentation
+                    HOT 게시판
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              {/* 분석 */}
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  href="#pablo"
+                  nav
+                  onClick={e => e.preventDefault()}
+                >
+                  <i className="now-ui-icons design_app mr-1"></i>
+                  <p>분석</p>
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem to="/index" tag={Link}>
+                    <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
+                    뇌피셜 분석
+                  </DropdownItem>
+                  <DropdownItem
+                    href="https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-index-navbar"
+                    target="_blank"
+                  >
+                    <i className="now-ui-icons design_bullet-list-67 mr-1"></i>
+                    오피셜 분석
+                  </DropdownItem>
+                  <DropdownItem
+                    href="https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-index-navbar"
+                    target="_blank"
+                  >
+                    <i className="now-ui-icons design_bullet-list-67 mr-1"></i>
+                    차트 분석
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              {/* 인증 */}
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  href="#pablo"
+                  nav
+                  onClick={e => e.preventDefault()}
+                >
+                  <i className="now-ui-icons design_app mr-1"></i>
+                  <p>인증</p>
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem to="/index" tag={Link}>
+                    <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
+                    흑우인증
+                  </DropdownItem>
+                  <DropdownItem
+                    href="https://demos.creative-tim.com/now-ui-kit-react/#/documentation/introduction?ref=nukr-index-navbar"
+                    target="_blank"
+                  >
+                    <i className="now-ui-icons design_bullet-list-67 mr-1"></i>
+                    황소인증
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -130,12 +176,12 @@ function IndexNavbar() {
                   id="upgrade-to-pro"
                   onClick={e => e.preventDefault()}
                 >
-                  <i className="now-ui-icons arrows-1_share-66 mr-1"></i>
-                  <p>Upgrade to PRO</p>
+                  <i className="now-ui-icons users_single-02 mr-1"></i>
+                  <p>로그인</p>
                 </Button>
-                <UncontrolledTooltip target="#upgrade-to-pro">
+                {/* <UncontrolledTooltip target="#upgrade-to-pro">
                   Cooming soon!
-                </UncontrolledTooltip>
+                </UncontrolledTooltip> */}
               </NavItem>
               <NavItem>
                 <NavLink
